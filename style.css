@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #8e1616;
+  color: #f8f4e1;
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-weight: 450;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-weight: 600;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.header {
+  background-color: #740a0a;
+  /* 
+color: #8e1616; */
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0 10%;
+  margin-bottom: 2rem;
+}
+
+.toggle-btn {
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #f8f4e1;
+  color: #8e1616;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #e6e2d3;
+  transform: scale(1.05);
+}
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 2rem;
+}
+
+.game-instructions {
+  max-width: 600px;
+  text-align: center;
+  padding: 1.5rem;
+  border: dashed 3px #00ffff;
+  border-radius: 10px;
+  background-color: rgba(248, 244, 225, 0.1);
+}
+
+.game-instructions > em > span {
+  color: #00ffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.game-instructions p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+#guess-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.input-box {
+  height: 60px;
+  width: 200px;
+  border: #f8f4e1 solid 4px;
+  border-radius: 30px;
+  background-color: #f8f4e1;
+  color: #8e1616;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: inherit;
+  outline: none;
+}
+
+.input-box:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.modify {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f8f4e1;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #f8f4e1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modify:hover {
+  background-color: #f8f4e1;
+  color: #8e1616;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.helping-btn {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.helping-btn > button {
+  background-color: #f8f4e1;
+  border: none;
+  border-radius: 30px;
+  color: #8e1616;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.helping-btn > button:hover {
+  background-color: #e6e2d3;
+  color: #16728e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.reply {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  min-height: 50px;
+  border-radius: 10px;
+  background-color: rgba(248, 244, 225, 0.1);
+}
+
+.hide {
+  display: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .game-instructions {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .center {
+    flex-wrap: wrap;
+  }
+
+  .helping-btn {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.success{
+    width: 700px;
+    height: 70px;
+    background-color: rgb(22, 209, 87);
+    color: rgb(64, 0, 255);
+}
