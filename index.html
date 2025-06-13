@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=2747&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <title>Guess The Number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="name">Guess The Number 🤔 <span class="toggle-btn">Theme</span></h1>
+    </header>
+
+    <main class="main-body">
+      <section class="game-instructions">
+        <em
+          ><span >RULES: </span>
+          <p>
+            Guess a number between <strong>1</strong> and <strong>100</strong>.
+            Use the input box or the +/- buttons to adjust your guess.
+          </p></em
+        >
+      </section>
+      <form id="guess-form" aria-label="Guess the number game form">
+        <label for="guess-input" class="visually-hidden"
+          >Enter your guess (1-100)</label
+        >
+        <input
+          type="number"
+          id="guess-input"
+          class="input-box"
+          placeholder="Enter 1-100"
+          max="100"
+          min="1"
+          aria-describedby="instructions"
+          required
+        />
+        <button type="button" class="modify" aria-label="Increase guess by 1">
+          +
+        </button>
+        <button type="button" class="modify" aria-label="Decrease guess by 1">
+          -
+        </button>
+        <button type="submit" class="submit-button">Submit</button>
+        <button type="reset" class="submit-button">Restart Game</button>
+      </form>
+
+      <div class="reply" role="alert" aria-live="polite"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
