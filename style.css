@@ -20,16 +20,17 @@ h1 {
 }
 
 .header {
-  background-color: #740a0a;
-  /* 
-color: #8e1616; */
+  background-color: #700d0d;
   display: flex;
-  text-align: center;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  margin: 0 10%;
-  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.name {
+  flex: 1; /* This allows the title to take available space */
+  text-align: center; /* Centers the title */
 }
 
 .toggle-btn {
@@ -41,6 +42,7 @@ color: #8e1616; */
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-left: auto; /* Pushes button to extreme right */
 }
 
 .toggle-btn:hover {
@@ -193,9 +195,59 @@ color: #8e1616; */
   }
 }
 
-.success{
-    width: 700px;
-    height: 70px;
-    background-color: rgb(22, 209, 87);
-    color: rgb(64, 0, 255);
+.success {
+  width: 700px;
+  height: 70px;
+  background-color: rgb(22, 209, 87);
+  color: rgb(64, 0, 255);
+}
+
+.reply.success {
+  background-color: rgba(46, 204, 113, 0.2);
+  border: 2px solid #2ecc71;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.my-message {
+  background-color: #700d0d;
+  color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  /* border: 2px solid #16728e; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-date,
+.footer-info {
+  padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer-link {
+  color: #eee;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }

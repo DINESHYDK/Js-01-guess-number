@@ -1,5 +1,4 @@
 // Generate the target number ONCE when the game starts
-
 let targetNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
 
@@ -17,7 +16,7 @@ function guessCheck() {
 
   if (userInput === targetNumber) {
     replyBox.classList.add("success");
-    replyBox.innerText = `🎉 Perfect! You guessed "${targetNumber}"   in   ${attempts}   attempts!`;
+    replyBox.innerText = `🎉 Perfect! You guessed "${targetNumber}" in ${attempts} attempts!`;
   } else if (Math.abs(userInput - targetNumber) < 3) {
     replyBox.classList.remove("success");
     replyBox.innerText = `Your guess (${userInput}) really close. With a range of +/-3`;
@@ -42,16 +41,24 @@ form.addEventListener("submit", function (event) {
 function addValue() {
   let userInput =
     parseInt(document.querySelector("#guess-input").value, 10) || 0;
-  if (userInput < 100)
+  if (userInput < 100) {
     document.querySelector("#guess-input").value = userInput + 1;
+  }
 }
 
 function subtractValue() {
   let userInput =
     parseInt(document.querySelector("#guess-input").value, 10) || 0;
-  if (userInput > 1)
+  if (userInput > 1) {
     document.querySelector("#guess-input").value = userInput - 1;
+  }
 }
+
+// Connect the +/- buttons to their functions
+document.querySelectorAll(".modify")[0].addEventListener("click", addValue);
+document
+  .querySelectorAll(".modify")[1]
+  .addEventListener("click", subtractValue);
 
 const toggleBtn = document.querySelector(".toggle-btn");
 toggleBtn.addEventListener("click", function () {
