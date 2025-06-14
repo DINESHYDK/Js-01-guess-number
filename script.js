@@ -55,10 +55,6 @@ function subtractValue() {
 }
 
 // Connect the +/- buttons to their functions
-document.querySelectorAll(".modify")[0].addEventListener("click", addValue);
-document
-  .querySelectorAll(".modify")[1]
-  .addEventListener("click", subtractValue);
 
 const toggleBtn = document.querySelector(".toggle-btn");
 toggleBtn.addEventListener("click", function () {
